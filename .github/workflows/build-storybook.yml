@@ -28,7 +28,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-cache-
 
-      - name: npm install
+      - name: yarn install
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
@@ -58,11 +58,21 @@ jobs:
           name: storybook-files
           path: storybook-static
 
+      - if: github.ref == 'refs/heads/master'
+        name: Clear master folders
+        run: |
+          shopt -s extglob
+          rm -rf -- !(develop|storybook-static|CNAME)
+          mv storybook-static/* .
+
+      - if: github.ref != 'refs/heads/master'
+        name: Clear ${GITHUB_REF##*/} folders
+        run: |
+          rm -rf ${GITHUB_REF##*/}
+          mv storybook-static ${GITHUB_REF##*/}
+
       - name: Commit updates
         run: |
-          mkdir -p storybook
-          rm -rf storybook/${GITHUB_REF##*/}
-          mv storybook-static storybook/${GITHUB_REF##*/}
           git add .
           git status
           git diff --staged --quiet && echo 'No changes to commit; exiting!' && exit 0
