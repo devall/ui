@@ -159,5 +159,5 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn build
-          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          nmp config list
           yarn release
