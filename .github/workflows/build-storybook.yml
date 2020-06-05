@@ -62,12 +62,22 @@ jobs:
       - name: yarn test
         uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: test
+          cmd: test --passWithNoTests
+        env:
+          CI: true
 
       - name: Build Storybook
         uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build-storybook
+
+      - if: github.ref == 'refs/heads/master'
+        name: Publish Storybook
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
