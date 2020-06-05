@@ -144,6 +144,11 @@ jobs:
           restore-keys: |
             yarn-deps-${{ hashFiles('yarn.lock') }}
 
+      - name: Build Release
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+
       - name: Create Release
         uses: borales/actions-yarn@v2.0.0
         with:
@@ -155,7 +160,5 @@ jobs:
           GIT_AUTHOR_NAME: ${{ github.actor }}
           GIT_COMMITTER_EMAIL: ${{ github.actor }}@users.noreply.github.com
           GIT_COMMITTER_NAME: ${{ github.actor }}
-        run: |
-          yarn install --frozen-lockfile
-          yarn build
-          yarn release
+        with:
+          cmd: release
