@@ -71,6 +71,14 @@ jobs:
         with:
           cmd: build-storybook
 
+      - if: github.ref == 'refs/heads/master'
+        name: Publish Storybook
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:

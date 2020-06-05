@@ -9,14 +9,13 @@
     "url": "https://github.com/devall/ui.git"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "build-storybook": "build-storybook -s public",
     "build-storybook-docs": "build-storybook -s public --docs",
-    "chromatic": "chromatic --project-token=0r21uavld5ve"
+    "test": "react-scripts test",
+    "chromatic": "chromatic",
+    "release": "auto shipit"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
