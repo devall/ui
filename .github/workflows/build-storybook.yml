@@ -151,8 +151,6 @@ jobs:
 
       - name: Create Release
         uses: borales/actions-yarn@v2.0.0
-        with:
-          auth-token: ${{ secrets.NPM_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -161,4 +159,5 @@ jobs:
           GIT_COMMITTER_EMAIL: ${{ github.actor }}@users.noreply.github.com
           GIT_COMMITTER_NAME: ${{ github.actor }}
         with:
+          auth-token: ${{ secrets.NPM_TOKEN }}
           cmd: release
