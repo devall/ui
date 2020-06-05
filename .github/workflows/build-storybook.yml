@@ -159,5 +159,6 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn build
-          nmp config list
+          npm config list
+          yarn config list
           yarn release
