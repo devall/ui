@@ -161,4 +161,5 @@ jobs:
           yarn build
           npm config list
           yarn config list
+          npm token list
           yarn release
