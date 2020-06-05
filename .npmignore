@@ -1,0 +1,10 @@
+/public
+/src
+/storybook-static
+/storybook-docs
+/.github
+/.storybook
+.gitignore
+.nvmrc
+.env
+CHANGELOG.md
