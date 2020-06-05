@@ -158,6 +158,7 @@ jobs:
           GIT_COMMITTER_NAME: ${{ github.actor }}
         run: |
           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          npm set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
           yarn install --frozen-lockfile
           yarn build
           npm config list
