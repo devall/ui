@@ -16,7 +16,7 @@
     "types": ["jest"],
     "lib": ["es2017", "dom"]
   },
-  "include": ["/"],
+  "include": ["**/*"],
   "exclude": [
     "**/dist",
     "node_modules",
