@@ -11,8 +11,8 @@ export const background = {
 
 export const color = {
   // Palette
-  primary: '#FF4785', // coral
-  secondary: '#1EA7FD', // ocean
+  primary: '#32a4dd',
+  secondary: '#1EA7FD',
   tertiary: '#DDDDDD',
 
   orange: '#FC521F',
@@ -83,6 +83,7 @@ export const pageMargin = '5.55555';
 
 export const pageMargins = css`
   padding: 0 ${spacing.padding.medium}px;
+  
   @media (min-width: ${breakpoint * 1}px) {
     margin: 0 ${pageMargin * 1}%;
   }
