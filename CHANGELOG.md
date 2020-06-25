@@ -1,3 +1,16 @@
+# v0.1.3 (Thu Jun 25 2020)
+
+#### 🐛 Bug Fix
+
+- feat: some improvements [#22](https://github.com/devall/ui/pull/22) ([@beautyfree](https://github.com/beautyfree))
+- feat: some improvements [#21](https://github.com/devall/ui/pull/21) ([@beautyfree](https://github.com/beautyfree))
+
+#### Authors: 1
+
+- Alexey Elizarov ([@beautyfree](https://github.com/beautyfree))
+
+---
+
 # v0.1.1 (Sat Jun 06 2020)
 
 #### 🐛 Bug Fix
