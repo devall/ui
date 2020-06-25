@@ -149,6 +149,7 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           scope: "@devall"
       - run: yarn --frozen-lockfile
+      - run: yarn build
       - run: yarn release
         env:
           # auto
