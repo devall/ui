@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{1441:function(e,n,t){"use strict";t.r(n);var o=t(57),s=t(481),a=Object(s.create)({base:"light",brandTitle:"Devall Design System",brandImage:"/logo.png"});o.addons.setConfig({theme:a})},484:function(e,n,t){t(485),t(633),t(1441),t(1280),t(1285),t(1391),t(1393),t(1422),e.exports=t(1425)},550:function(e,n){}},[[484,1,2]]]);
