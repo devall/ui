@@ -18,7 +18,8 @@
     "build-storybook-docs": "build-storybook -s public --docs",
     "test": "react-scripts test",
     "chromatic": "chromatic",
-    "release": "auto shipit"
+    "release": "auto shipit",
+    "prepublish": "yarn build"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
