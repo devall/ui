@@ -1,3 +1,15 @@
+# v0.1.4 (Thu Jun 25 2020)
+
+#### 🐛 Bug Fix
+
+- fix: build before publish [#23](https://github.com/devall/ui/pull/23) ([@beautyfree](https://github.com/beautyfree))
+
+#### Authors: 1
+
+- Alexey Elizarov ([@beautyfree](https://github.com/beautyfree))
+
+---
+
 # v0.1.3 (Thu Jun 25 2020)
 
 #### 🐛 Bug Fix
